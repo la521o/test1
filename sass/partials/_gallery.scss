@@ -1,0 +1,27 @@
+.masonry { 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+  height: 100vw;
+  padding: 60px;
+
+}
+.masonry img {  
+  width: 33.33333333333%;
+  transition: .8s opacity;
+} 
+
+.masonry:hover img { opacity: 0.3; }
+.masonry:hover img:hover { opacity: 1; } 
+
+/* fallback for earlier versions of Firefox */
+
+@supports not (flex-wrap: wrap) {
+  .masonry { display: block; }
+  .masonry img {  
+  display: inline-block;
+  vertical-align: top;
+  }
+}
+
+ 
